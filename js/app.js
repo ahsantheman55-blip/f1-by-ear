@@ -517,6 +517,6 @@
     box.innerHTML = html + '</ul>';
   }
   renderCal(); renderBest();
-  if ('serviceWorker' in navigator && location.protocol === 'https:') { try { navigator.serviceWorker.register('sw.js'); } catch (e) {} }
+  if ('serviceWorker' in navigator && location.protocol === 'https:') { try { navigator.serviceWorker.register('sw.js').catch(function () {}); } catch (e) {} }
   window.__f1.api = { startRace: startRace, startLesson: startLesson, startCalib: startCalib, beginLights: beginLights, pause: pause, resume: resume, leave: leave, calibAdvance: calibAdvance, onPadTap: onPadTap };
 })();
